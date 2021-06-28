@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light on off</title>
+    <style>
+      body {
+        background-color: paleturquoise;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      img {
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero">
+        <h1>Can you turn the light on?</h1>
+        <button id="on">Turn the light on</button>
+        <img src="off.png" alt="Light off image." id="offImg" />
+        <button id="off">Turn the light off</button>
+      </div>
+    </div>
+
+    <script>
+      let on = document.getElementById("on");
+      let off = document.getElementById("off");
+
+      on.addEventListener("click", () => {
+        document.getElementById("offImg").src = "on.png";
+      });
+      off.addEventListener("click", () => {
+        document.getElementById("offImg").src = "off.png";
+      });
+    </script>
+  </body>
+</html>
